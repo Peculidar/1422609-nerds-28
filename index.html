@@ -20,8 +20,7 @@
     </nav>
   </header>
   <main>
-    <!-- Смысловой h1, в дизайне нет -->
-    <h1>Дизайн студия Нёрдс</h1>
+    <h1 class="visually-hidden">Дизайн студия Нёрдс</h1>
     <!-- Дальше раздел со слайдером-->
     <section>
       <ul>
@@ -43,8 +42,7 @@
       </ul>
     </section>
     <section>
-      <!-- Смысловой h2, в дизайне нет -->
-      <h2>Услуги</h2>
+      <h2 class="visually-hidden">Услуги</h2>
       <ul>
         <li>
           <h3>Веб-сайты</h3>
@@ -119,8 +117,7 @@
     </section>
     <section>
       <article>
-        <!-- Смысловой h4, в дизайне нет -->
-        <h4>Контакты</h4>
+        <h4 class="visually-hidden">Контакты</h4>
         <p class="contact_heading">Nёrds Design Studio</p>
         <p>191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8
@@ -128,8 +125,20 @@
         <p>Тел. +7 (812) 275-75-75</p>
         <a href="blank.html">Напишите нам</a>
       </article>
-      <!-- Здесь будет карта -->
     </section>
+    <!-- Всплывающее окно с формой-->
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <fieldset>
+        <legend>Напишите нам</legend>
+        <label for="name">Ваше имя:</label>
+        <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+        <label for="email">Ваш e-mail</label>
+        <input type="email" name="email" id="email" placeholder="email@example.com"><br>
+        <label for="letter">Текст письма</label><br>
+        <textarea rows="6" cols="66" id="letter" name="letter" placeholder="В свободной форме"></textarea><br>
+      </fieldset>
+      <button type="submit">Отправить</button>
+    </form>
   </main>
   <footer>
     <ul>

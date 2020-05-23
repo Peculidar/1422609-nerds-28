@@ -28,11 +28,14 @@
         <li><a href="blank.html">По убыванию</a></li>
         <li><a href="blank.html">По возрастанию</a></li>
       </ul>
-      
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Стоимость</legend>
-          <!--Сюда добавлю инпут в следующем задании-->
+          <input type="range" name="cost" id="cost" min="0" max="15000" step="1">
+          <label for="cost_min">От</label>
+          <input type="number" name="cost_min" id="cost_min" value="0">
+          <label for="cost_max">До</label>
+          <input type="cost_max" name="cost_max" id="cost_max" value="15000">
         </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
@@ -170,7 +173,7 @@
       </section>
       <!-- Всплывающее окно с формой-->
       <form action="https://echo.htmlacademy.ru" method="post">
-        <h4 class="contact_form">Напишите нам</h4>
+        <p class="contact_form">Напишите нам</h4>
         <label for="name">Ваше имя:</label>
         <input type="text" name="name" id="name" placeholder="Имя Фамилия">
         <label for="email">Ваш e-mail</label>

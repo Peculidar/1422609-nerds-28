@@ -132,11 +132,11 @@ img {
 
 .green-background:hover {
   background-color: var(--special-green);
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .green-background:active {
   background-color: var(--special-dark-green);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .yellow-background {

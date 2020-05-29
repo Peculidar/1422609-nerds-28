@@ -21,6 +21,9 @@
   --special-dark-green: #00AA62;
   --special-dark-yellow: #E5A722;
   --special-dark-gray: #D5D5D5;
+
+  --opacity-black: rgba(0, 0, 0, 0.3);
+  --opacity-white: rgba(255, 255, 255, 0.3);
 }
 
 /* Visually hidden */
@@ -58,7 +61,7 @@ img {
 }
 
 .main-navigation a {
-  font-weight: medium;
+  font-weight: 500;
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
@@ -86,7 +89,7 @@ img {
 
 .services h3 {
   font-size: 24;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--basic-black);
   text-transform: uppercase;
   line-height: 30px;
@@ -98,7 +101,7 @@ img {
 
 /* Multi-colored order links */
 
-.order-link {
+.services-item a {
   display: inline-block;
   color: var(--basic-white);
   line-height: 18px;
@@ -109,54 +112,54 @@ img {
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  font-weight: medium;
+  font-weight: 500;
   border-radius: 3px;
 }
 
-.red-background {
+.services-item-sites a {
   background-color: var(--basic-red);
 }
 
-.red-background:hover {
+.services-item-sites a:hover {
   background-color: var(--special-red);
 }
 
-.red-background:active {
+.services-item-sites a:active {
   background-color: var(--special-dark-red);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--opacity-white);
 }
 
-.green-background {
+.services-item-apps a {
   background-color: var(--basic-green);
 }
 
-.green-background:hover {
+.services-item-apps a:hover {
   background-color: var(--special-green);
 }
 
-.green-background:active {
+.services-item-apps a:active{
   background-color: var(--special-dark-green);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--opacity-white);
 }
 
-.yellow-background {
+.services-item-presentations a {
   background-color: var(--basic-yellow);
 }
 
-.yellow-background:hover {
+.services-item-presentations a:hover {
   background-color: var(--special-yellow);
 }
 
-.yellow-background:active {
+.services-item-presentations a:active {
   background-color: var(--special-dark-yellow);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--opacity-white);
 }
 
 /* Footer */ 
 
 .friend-us {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--basic-black);
   line-height: 36px;
 }
@@ -204,17 +207,17 @@ img {
   color: var(--basic-black);
   font-size: 55px;
   line-height: 55px;
-  font-weight: medium;
+  font-weight: 500;
   text-align: center;
   background-color: var(--basic-light-gray);
 }
 
 /* Filters */
 
-legend {
+.filters legend {
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--basic-black);
   text-transform: uppercase;
 }
@@ -241,7 +244,7 @@ legend {
 }
 
 .show-results:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--opacity-black);
   background-color: var(--special-dark-gray);
 }
 
@@ -264,7 +267,7 @@ legend {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   color: var(--basic-black);
@@ -275,7 +278,7 @@ legend {
 }
 
 .product-popup .product-page:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--opacity-black);
 }
 
 .price {
@@ -308,7 +311,7 @@ legend {
 
 .current-page {
   display: inline-block;
-  font-weight: medium;
+  font-weight: 500;
   line-height: 18px;
   color: var(--basic-black);
   background-color: var(--basic-white);
@@ -323,7 +326,7 @@ legend {
 
 .page-number {
   display: inline-block;
-  font-weight: medium;
+  font-weight: 500;
   line-height: 18px;
   color: var(--basic-black);
   background-color: var(--basic-light-gray);
@@ -338,7 +341,7 @@ legend {
 
 .more-pages {
   display: inline-block;
-  font-weight: medium;
+  font-weight: 500;
   line-height: 18px;
   color: var(--basic-black);
   background-color: var(--basic-light-gray);
@@ -359,7 +362,7 @@ legend {
 
 .page-number:active,
 .more-pages:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--opacity-black);
   background-color: var(--special-dark-gray);
   border: 3px solid var(--special-dark-gray);
 }

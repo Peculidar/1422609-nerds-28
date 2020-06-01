@@ -89,7 +89,7 @@ img {
 /* Services */
 
 .services h3 {
-  font-size: 24;
+  font-size: 24px;
   font-weight: 700;
   color: var(--basic-black);
   text-transform: uppercase;
@@ -204,10 +204,11 @@ img {
 
 /* Catalog */
 
-.shop-title {
+.page-catalog h1 {
   color: var(--basic-black);
   margin: 0;
   padding-top: 87px;
+  padding-bottom: 108px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
@@ -285,17 +286,17 @@ img {
 }
 
 .price {
-    display: inline-block;
-    background-color: var(--basic-red);
-    color: var(--basic-white);
-    width: 200px;
-    line-height: 18px;
-    padding-top: 17px;
-    padding-bottom: 15px;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    border-radius: 3px;
+  display: inline-block;
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  width: 200px;
+  line-height: 18px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border-radius: 3px;
 }
 
 .price:hover {
@@ -370,7 +371,7 @@ img {
   border: 3px solid var(--special-dark-gray);
 }
 
-/* Grid */
+/* Full page grid */
 
 .page {
   height: 100%;
@@ -384,112 +385,115 @@ img {
 
 /* Header: logo, navigation, cart */
 
-.main-navigation-wrapper {
-  width: 100%;
-}
-
-.nav-container {
-  margin-top: 49px;
-  margin-left: auto;
-  margin-right: auto;
+.main-navigation {
+  margin: 0 auto;
   width: 1157px;
+  height: 114px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .main-header-logo {
+  margin: 0;
+  padding: 0;
   width: 160px;
   height: 65px;
-  
+  margin-right: 202px;
+}
+
+.shopping-cart {
+  margin-left: 280px;
+  padding-bottom: 13px;
 }
 
 .site-navigation {
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-basis: 440px;
+  flex-grow: 1;
   justify-content: space-between;
-  list-style: none;
 }
 
-.shopping-cart  {
-  margin-left: 205px;
+.site-navigation li {
+  padding-bottom: 13px;
 }
 
-/* Services promo grid */
+/* Main page content */
+
+.page-content {
+  width: 1157px;
+  margin: 0 auto;
+}
 
 .services-list { 
-  padding: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  padding: 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
   width: 1157px;
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-gap: 100px;
 }
 
-/* footer */
+/* Footer */
 
 .footer-wrapper {
+  margin: 0 auto;
+  padding: 0;
   width: 1157px;
-  padding: 0px;
-  
-  outline-offset: -5px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
-  align-items: center;
 }
 
 .social-media {
-  margin: 0;
   padding: 0;
-  width: 261px;
-  margin-right: 139px;
-  
+  margin: 0;
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.social-media li {
+  margin-right: 9px;
 }
 
 .join-us {
+  margin-left: 130px;
   list-style: none;
-  margin-top: 68px;
-  margin-bottom: 68px;
-  padding: 0;
-  width: 600px;
-  height: 75px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
+.join-us li {
+  margin-bottom: 10px;
+}
 
-/* Catalog grid */
+/* Catalog main content */
+
+.filters-and-products {
+  padding: 0;
+  width: 1157px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
+  justify-content: space-around;
+
+
+
+}
+
+.filters {
+  padding: 0;
+  margin: 0;
+  margin-right: 140px;
+}
 
 .product-grid {
+  margin: 0;
+  margin-bottom: 70px;
+  padding: 0;
   width: 100%;
   display: grid;
   grid-template-columns: 360px 360px;
   grid-column-gap: 41px;
   grid-row-gap: 31px;
-}
-
-.page-catalog {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.filters {
-  margin-right: 140px;
-  align-content: flex-start;
-  width: 260px;
-}
-
-.shop-title {
-  flex-basis: 100%;
-  padding-bottom: 108px;
-  margin-bottom: 55px;
 }

@@ -9,20 +9,24 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
         <a class="main-header-logo">
           <img src="img/logo-nerds-bw.svg" width="160" height="65" alt="Логотип Нёрдс">
         </a>
-        <ul class="site-navigation">
-          <li><a>Cтудия</a></li>
-          <li><a href="blank.html">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="blank.html">Контакты</a></li>
-        </ul>
-        <a class="shopping-cart" href="blank.html">Корзина</a>
+        <div class="user-navigation">
+          <ul class="site-navigation">
+            <li><a class="current-link">Cтудия</a></li>
+            <li><a href="blank.html">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="blank.html">Контакты</a></li>
+          </ul>
+          <div class="shopping-navigation">
+            <a class="shopping-cart" href="blank.html">Корзина</a>
+          </div>
+        </div>
       </nav>
     </header>
-    <main class="page-content">
+    <main class="container">
       <h1 class="visually-hidden">Дизайн студия Нёрдс</h1>
       <!-- Дальше раздел со слайдером-->
       <section class="visually-hidden">
@@ -145,7 +149,7 @@
       </form>
     </main>
     <footer>
-      <div class="footer-wrapper">
+      <div class="footer-wrapper container">
         <ul class="social-media">
           <li class="social-icon">
             <a href="#">

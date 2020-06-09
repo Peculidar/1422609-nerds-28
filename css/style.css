@@ -27,6 +27,7 @@
 
   --opacity-black: rgba(0, 0, 0, 0.3);
   --opacity-white: rgba(255, 255, 255, 0.3);
+  --opacity-placeholder-gray: rgba(68, 68, 68, 0.5);
 }
 
 /* VISUALLY HIDDEN */
@@ -87,6 +88,7 @@ img {
 
 .main-header { 
   background-color: var(--basic-light-gray);
+  padding-top: 49px;
 }
 
 .main-header a {
@@ -108,7 +110,6 @@ img {
 
 .main-header-logo {
   margin: 0;
-  padding-top: 49px;
   width: 160px;
   height: 65px;
 }
@@ -116,7 +117,7 @@ img {
 .header-navigation {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .site-navigation-list {
@@ -129,24 +130,17 @@ img {
   flex-wrap: wrap;
 }
 
+.site-navigation-list li {
+  margin: 0 22px;
+}
+
 .site-navigation-list a,
 .view-cart-link {
   display: block;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
+  padding-top: 27px;
   margin: 0;
   border-bottom: 2px solid transparent;
-  margin-bottom: -5px;
-}
-
-.site-navigation-list li:first-child {
-  margin-right: 44px;
-}
-.site-navigation-list li:nth-child(4) {
-  margin-left: 45px;
-}
-
-.site-navigation-list li:nth-child(3) {
-  margin-left: 48px;
 }
 
 nav .current-link {
@@ -154,8 +148,6 @@ nav .current-link {
 }
 
 .view-cart-link {
-  padding-top: 7px;
-  padding-bottom: 12px;
   padding-left: 40px;
   padding-right: 0;
   margin-right: 0;
@@ -166,7 +158,7 @@ nav .current-link {
 .view-cart-link::before {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 33px;
   left: 0px;
   width: 15px;
   height: 15px;
@@ -222,7 +214,10 @@ nav .current-link {
   text-transform: uppercase;
   font-weight: 500;
   border-radius: 3px;
-  
+}
+
+.services-item a:focus {
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .services-item-sites a {
@@ -288,37 +283,27 @@ nav .current-link {
   margin-top: 17px;
 }
 
-.services-item-sites::before {
+.services-list li::before {
   content: "";
   position: absolute;
+  width: 100%;
   background-position: 0 0;
-  background-image: url("/img/services-websites.jpg");
   width: 300px;
   height: 146px;
   top: 0px;
   left: 0px;
+}
+
+.services-item-sites::before {
+  background-image: url("/img/services-websites.jpg");
 }
 
 .services-item-apps::before {
-  content: "";
-  position: absolute;
-  background-position: 0 0;
   background-image: url("/img/services-apps.jpg");
-  width: 300px;
-  height: 146px;
-  top: 0px;
-  left: 0px;
 }
 
 .services-item-presentations::before {
-  content: "";
-  position: absolute;
-  background-position: 0 0;
   background-image: url("/img/services-presentations.jpg");
-  width: 300px;
-  height: 146px;
-  top: 0px;
-  left: 0px;
 }
 
 /* CATALOG.HTML MAIN */
@@ -333,15 +318,35 @@ nav .current-link {
   font-weight: 700;
   color: var(--basic-black);
   text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.filters ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .filters li {
-  list-style: none;
+  margin-bottom: 12px;
+}
+
+.filters label {
+  font: inherit;
   line-height: 19px;
+  margin-left: 11px;
+}
+
+.filters .range-text {
+  text-transform: uppercase;
+  line-height: 22px;
 }
 
 /* Filters Button */
 .show-results {
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 18px;
   width: 260px;
   height: 50px;
   border: none;
@@ -359,6 +364,9 @@ nav .current-link {
 .show-results:active {
   color: var(--opacity-black);
   background-color: var(--special-dark-gray);
+  outline: none;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  border-radius: 3px;
 }
 
 /* catalog.html MAIN - general */
@@ -370,27 +378,29 @@ nav .current-link {
 .product-popup {
   background-color: var(--basic-light-gray);
   text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .product-popup p {
   color: var(--basic-devil-gray);
 }
 
-.product-popup .product-page {
+.product-popup .product-name {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  margin-top: 26px;
   color: var(--basic-black);
 }
 
-.product-popup .product-page:hover {
+.product-popup .product-name:hover {
   color: var(--basic-red);
 }
 
-.product-popup .product-page:active {
+.product-popup .product-name:active {
   color: var(--opacity-black);
 }
 
@@ -402,6 +412,7 @@ nav .current-link {
   line-height: 18px;
   padding-top: 17px;
   padding-bottom: 15px;
+  margin-bottom: 44px;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -414,6 +425,8 @@ nav .current-link {
 
 .price:active {
   background-color: var(--special-dark-red);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  border-radius: 3px;
 }
 
 .filters-and-products {
@@ -441,6 +454,18 @@ nav .current-link {
   grid-row-gap: 31px;
 }
 
+.product-screencap {
+  position: relative;
+}
+
+.product-popup {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+
+
 /* CONTACT FORM */
 
 .temporary-whitespace {
@@ -464,35 +489,37 @@ nav .current-link {
   display: block;
   position: absolute;
   background-color: var(--basic-white);
-  outline: 2px solid var(--basic-light-gray); /*ВРЕМЕННОЕ, пока не умею делать box-shadow*/
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   z-index: 100;
 }
 
-.contact-form-wrapper {
-  position: relative;
-  margin-top: 35px;
-  margin-left: 100px;
-}
-
   .close-cross {
-  display: block;
+  display: inline-block;
   position: absolute;
+  border: none;
   right: 90px;
-  top: 45px;
+  top: 79px;
   background-image: url("/img/close-cross.svg");
+  opacity: 0.3;
+  background-color: var(--basic-white);
   width: 21px;
   height: 21px;
 }
 
 .close-cross:hover {
-  background-image: url("/img/close-cross-hover.svg");
+  opacity: 1;
 }
 
 .close-cross:active {
-  background-image: url("/img/close-cross-active.svg");
+  opacity: 0.1;
+  outline: none;
 }
 
 .contact-form {
+  padding-top: 31px;
+  padding-left: 100px;
+  padding-right: 99px;
+  padding-bottom: 84px;
   flex-basis: 770px;
   display: flex;
   flex-wrap: wrap;
@@ -501,8 +528,9 @@ nav .current-link {
 
 .contact-form p {
   width: 100%;
-  margin-bottom: 52px;
+  margin-bottom: 51px;
   font-size: 45px;
+  line-height: auto;
   font-weight: 700;
   color: var(--basic-black);
 }
@@ -520,25 +548,24 @@ nav .current-link {
   width: 360px;
   height: 50px;
   border: 2px solid var(--basic-input-gray);
-  border-radius: 5px;
+  border-radius: 3px;
   padding-right: 14px;
   padding-left: 14px;
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-bottom: 34px;
   box-sizing: border-box;
 }
 
-.contact-form input::-webkit-input-placeholder {
-  color: var(--basic-placeholder-gray);
+.contact-form-item {
+  margin-bottom: 34px;
+}
+
+.contact-form input::placeholder {
+  color: var(--opacity-placeholder-gray);
 }
 
 .contact-form input:hover {
   border-color: var(--special-placeholder-gray);
-}
-
-.contact-form input:hover::-webkit-input-placeholder {
-  color: var(--special-placeholder-gray);
 }
 
 .contact-form input:focus {
@@ -561,6 +588,7 @@ nav .current-link {
 
 .contact-form .letter {
   width: 100%;  
+  margin-bottom: 8px;
 }
 
 .contact-form textarea {
@@ -568,21 +596,17 @@ nav .current-link {
   height: 118px;
   box-sizing: border-box;
   border: 2px solid var(--basic-input-gray);
-  border-radius: 5px;
+  border-radius: 3px;
   padding-left: 14px;
   padding-top: 16px;
 }
 
-.contact-form textarea::-webkit-input-placeholder {
-  color: var(--basic-placeholder-gray);
+.contact-form textarea::placeholder {
+  color: var(--opacity-placeholder-gray);
 }
 
 .contact-form textarea:hover {
   border-color: var(--special-placeholder-gray);
-}
-
-.contact-form textarea:hover::-webkit-input-placeholder {
-  color: var(--special-placeholder-gray);
 }
 
 .contact-form textarea:focus {
@@ -599,7 +623,7 @@ nav .current-link {
   border-color: var(--special-red);
 }
 
-.contact-form button {
+.contact-form .submit-form {
   margin-top: 47px;
   width: 259px;
   height: 50px;
@@ -610,24 +634,27 @@ nav .current-link {
   color: var(--basic-white);
   border: none;
   background-color: var(--basic-red);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
-.contact-form button:hover {
+.contact-form .submit-form:hover {
   background-color: var(--special-red);
 }
 
-.contact-form button:active {
+.contact-form .submit-form:active {
+  outline: none;
   background-color: var(--special-dark-red);
   color: var(--opacity-white);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 /* FOOTER */
 
 .footer-wrapper {
-  height: 217px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 66px;
+  margin-bottom: 76px;
 }
 
 .friend-us {
@@ -672,9 +699,10 @@ nav .current-link {
 
 .social-icon:active {
   background-color: var(--special-dark-red);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.social-icon svg:active {
+.social-icon:active svg {
   opacity: 0.3;
 }
 

@@ -5,13 +5,13 @@
     <title>Нёрдс: Каталог</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/minimized-style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
       <nav class="header-navigation container">
         <a href="index.html" class="main-header-logo">
-          <img src="css/img/logo-nerds-bw.svg" width="160" height="65" alt="Логотип Нёрдс">
+          <img src="img/logo-nerds-bw.svg" width="160" height="65" alt="Логотип Нёрдс">
         </a>
         <ul class="site-navigation-list">
           <li><a href="#">Cтудия</a></li>
@@ -36,15 +36,15 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <button class="toggle toggle-min" type="button"  tabindex="0" aria-label="Кнопка указания минимальной стоимости"></button>
-                  <button class="toggle toggle-max" type="button"  tabindex="0" aria-label="Кнопка указания максимальной стоимости"></button>
+                  <button class="toggle toggle-min" type="button"  aria-label="Кнопка указания минимальной стоимости"></button>
+                  <button class="toggle toggle-max" type="button"  aria-label="Кнопка указания максимальной стоимости"></button>
                 </div>
                 <div class="price-controls">
                   <label class="min-price"> от 
-                    <input type="number" name="min-price" value="0">
+                    <input type="number" name="min-price" placeholder="0">
                   </label>
                   <label class="max-price"> до 
-                    <input type="number" name="max-price" value="15000">
+                    <input type="number" name="max-price" placeholder="15 000">
                   </label>
                 </div>
               </div>
@@ -99,9 +99,9 @@
             <p class="filter-heading">Cортировать:</p>
             <div class="filters-right-column">
               <ul class="filters-top-list">
-                <li><a class="current-filter">По цене</a></li>
-                <li><a href="#">По типу</a></li>
-                <li><a href="#">По названию</a></li>
+                <li class="sort-filters"><a class="current-filter">По цене</a></li>
+                <li class="sort-filters"><a href="#">По типу</a></li>
+                <li class="sort-filters"><a href="#">По названию</a></li>
               </ul>
               <ul class="filter-shapes">
                 <li>
@@ -139,7 +139,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1793 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1793 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1903 25.6658 39.9398 23.5C38.6894 21.3342 38.6894 18.6658 39.9398 16.5C41.1903 14.3342 43.5011 13 46.002 13C49.868 13 53.002 16.134 53.002 20C53.002 23.866 49.868 27 46.002 27ZM62.9508 23.5C64.2013 25.6658 66.5121 27 69.013 27C72.879 27 76.013 23.866 76.013 20C76.013 16.134 72.879 13 69.013 13C66.5121 13 64.2013 14.3342 62.9508 16.5C61.7004 18.6658 61.7004 21.3342 62.9508 23.5Z" fill="#4D4D4D"/>
                     </g>
                   </svg>
-                  <img src="css/img/product-sedona.jpg" width="360" height="576" alt="Скриншот макета Sedona">
+                  <img src="img/product-sedona.jpg" width="360" height="576" alt="Скриншот макета Sedona">
                 </a>
               </li>
               <li class="product-screencap">
@@ -157,7 +157,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1793 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1793 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1903 25.6658 39.9398 23.5C38.6894 21.3342 38.6894 18.6658 39.9398 16.5C41.1903 14.3342 43.5011 13 46.002 13C49.868 13 53.002 16.134 53.002 20C53.002 23.866 49.868 27 46.002 27ZM62.9508 23.5C64.2013 25.6658 66.5121 27 69.013 27C72.879 27 76.013 23.866 76.013 20C76.013 16.134 72.879 13 69.013 13C66.5121 13 64.2013 14.3342 62.9508 16.5C61.7004 18.6658 61.7004 21.3342 62.9508 23.5Z" fill="#4D4D4D"/>
                     </g>
                   </svg>                 
-                  <img src="css/img/product-pink.jpg" width="358" height="576" alt="Скриншот макета Pink App" class="fill">
+                  <img src="img/product-pink.jpg" width="358" height="576" alt="Скриншот макета Pink App" class="fill">
                 </a>
               </li>
               <li class="product-screencap">
@@ -176,7 +176,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1793 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1793 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1903 25.6658 39.9398 23.5C38.6894 21.3342 38.6894 18.6658 39.9398 16.5C41.1903 14.3342 43.5011 13 46.002 13C49.868 13 53.002 16.134 53.002 20C53.002 23.866 49.868 27 46.002 27ZM62.9508 23.5C64.2013 25.6658 66.5121 27 69.013 27C72.879 27 76.013 23.866 76.013 20C76.013 16.134 72.879 13 69.013 13C66.5121 13 64.2013 14.3342 62.9508 16.5C61.7004 18.6658 61.7004 21.3342 62.9508 23.5Z" fill="#4D4D4D"/>
                     </g>
                   </svg>
-                  <img src="css/img/product-barbershop.jpg" width="364" height="582" alt="Скриншот макета Barbershop">
+                  <img src="img/product-barbershop.jpg" width="364" height="582" alt="Скриншот макета Barbershop">
                 </a>
               </li>
               <li class="product-screencap">
@@ -195,7 +195,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1793 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1793 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1903 25.6658 39.9398 23.5C38.6894 21.3342 38.6894 18.6658 39.9398 16.5C41.1903 14.3342 43.5011 13 46.002 13C49.868 13 53.002 16.134 53.002 20C53.002 23.866 49.868 27 46.002 27ZM62.9508 23.5C64.2013 25.6658 66.5121 27 69.013 27C72.879 27 76.013 23.866 76.013 20C76.013 16.134 72.879 13 69.013 13C66.5121 13 64.2013 14.3342 62.9508 16.5C61.7004 18.6658 61.7004 21.3342 62.9508 23.5Z" fill="#4D4D4D"/>
                     </g>
                   </svg>
-                  <img src="css/img/product-mishka.jpg" width="362" height="580" alt="Скриншот макета Mishka">
+                  <img src="img/product-mishka.jpg" width="362" height="580" alt="Скриншот макета Mishka">
                 </a>
               </li>
               <li class="product-screencap">
@@ -214,7 +214,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1793 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1793 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1903 25.6658 39.9398 23.5C38.6894 21.3342 38.6894 18.6658 39.9398 16.5C41.1903 14.3342 43.5011 13 46.002 13C49.868 13 53.002 16.134 53.002 20C53.002 23.866 49.868 27 46.002 27ZM62.9508 23.5C64.2013 25.6658 66.5121 27 69.013 27C72.879 27 76.013 23.866 76.013 20C76.013 16.134 72.879 13 69.013 13C66.5121 13 64.2013 14.3342 62.9508 16.5C61.7004 18.6658 61.7004 21.3342 62.9508 23.5Z" fill="#4D4D4D"/>
                     </g>
                   </svg>
-                  <img src="css/img/product-aplus.jpg" width="364" height="582" alt="Скриншот макета A Plus">
+                  <img src="img/product-aplus.jpg" width="364" height="582" alt="Скриншот макета A Plus">
                 </a>
               </li>
               <li class="product-screencap">
@@ -233,7 +233,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1793 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1793 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1903 25.6658 39.9398 23.5C38.6894 21.3342 38.6894 18.6658 39.9398 16.5C41.1903 14.3342 43.5011 13 46.002 13C49.868 13 53.002 16.134 53.002 20C53.002 23.866 49.868 27 46.002 27ZM62.9508 23.5C64.2013 25.6658 66.5121 27 69.013 27C72.879 27 76.013 23.866 76.013 20C76.013 16.134 72.879 13 69.013 13C66.5121 13 64.2013 14.3342 62.9508 16.5C61.7004 18.6658 61.7004 21.3342 62.9508 23.5Z" fill="#4D4D4D"/>
                     </g>
                   </svg>
-                  <img src="css/img/product-kvast.jpg" width="362" height="580" alt="Скриншот макета Кваст">
+                  <img src="img/product-kvast.jpg" width="362" height="580" alt="Скриншот макета Кваст">
                 </a>
               </li>
             </ul>
@@ -249,16 +249,14 @@
         </section>
       </div>
       <section class="background-map">
-        <article class="address-block-article">
-          <div class="address-block-wrapper">
-            <div class="address-block-content">
-              <h4 class="visually-hidden">Контакты</h4>
-              <p class="contact-heading">Nёrds Design Studio</p>
-              <p>191186, Санкт-Петербург,<br>
-                ул. Б. Конюшенная, д. 19/8</p>
-                <a class="phone-number" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-                <a class="modal-button" href="blank.html">Напишите нам</a>
-            </div>
+        <article class="address-block-article container">
+          <div class="address-block-content">
+            <h4 class="visually-hidden">Контакты</h4>
+            <p class="contact-heading">Nёrds Design Studio</p>
+            <p>191186, Санкт-Петербург,<br>
+              ул. Б. Конюшенная, д. 19/8</p>
+            <a class="phone-number" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+            <a class="modal-button" href="blank.html">Напишите нам</a>
           </div>
         </article>
       </section>

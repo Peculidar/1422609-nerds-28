@@ -5,7 +5,7 @@
     <title>Нёрдс: Каталог</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/minimized-style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -36,8 +36,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <button class="toggle toggle-min" type="button"  aria-label="Кнопка указания минимальной стоимости"></button>
-                  <button class="toggle toggle-max" type="button"  aria-label="Кнопка указания максимальной стоимости"></button>
+                  <button class="toggle toggle-min" type="button" aria-label="Кнопка указания минимальной стоимости"></button>
+                  <button class="toggle toggle-max" type="button" aria-label="Кнопка указания максимальной стоимости"></button>
                 </div>
                 <div class="price-controls">
                   <label class="min-price"> от 
@@ -111,7 +111,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="unselected-triangle-filter">
+                <li class="unselected-filter-shape">
                   <a href="#" aria-label="По возрастанию">
                     <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6"/>
@@ -260,7 +260,7 @@
           </div>
         </article>
       </section>
-      <article class="contact-form-article visually-hidden">
+      <article class="contact-form-article">
         <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
           <p>Напишите нам</p>
           <button class="close-cross" type="button" aria-label="Кнопка закрытия окна"></button>
@@ -307,5 +307,6 @@
         <span>Скидка 10% для друзей из социальных сетей.</span></p>
       </div>
     </footer>
+    <script src="js/contact-form.js"></script>
   </body>
 </html>

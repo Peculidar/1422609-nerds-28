@@ -1,7 +1,13 @@
 const contactUsLink = document.querySelector(".modal-button");
-const contactUsPopup = document.querySelector(".contact-form-article");
+const contactPopup = document.querySelector(".contact-form-article");
+const closeForm = contactPopup.querySelector(".close-cross");
 
-contactUsLink.addEventListener("click", function(evt) {
+contactUsLink.addEventListener("click", function (evt) {
     evt.preventDefault();
+    contactPopup.classList.add("form-show");
+});
 
+closeForm.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    contactPopup.classList.remove("form-show");
 });

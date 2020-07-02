@@ -24,10 +24,10 @@ contactUsLink.addEventListener("click", function (evt) {
   contactPopup.classList.add("form-show");
   if (nameStorage) {
     contactName.value = nameStorage;
-  } 
+  }
   if (emailStorage) {
     сontactEmail.value = emailStorage;
-  } 
+  }
   if (nameStorage && emailStorage) {
     contactMessage.focus();
   } else {

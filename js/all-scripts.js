@@ -1,3 +1,5 @@
+// CONTACT FORM
+
 var contactUsLink = document.querySelector(".modal-button");
 var contactPopup = document.querySelector(".contact-form-article");
 var closeForm = contactPopup.querySelector(".close-cross");
@@ -14,54 +16,52 @@ try {
   nameStorage = localStorage.getItem("name");
   emailStorage = localStorage.getItem("email");
 } catch (err) {
-	isStorageSupport = false;
+  isStorageSupport = false;
 }
 
 contactUsLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   contactPopup.classList.add("form-show");
   if (nameStorage) {
-      contactName.value = nameStorage;
+    contactName.value = nameStorage;
   } 
   if (emailStorage) {
-    contactEmail.value = emailStorage;
+    сontactEmail.value = emailStorage;
   } 
   if (nameStorage && emailStorage) {
-		contactMessage.focus();
-	} else if (nameStorage && !emailStorage) {
-		emailName.focus();
-	} else {
-		contactName.focus();
-	}
+    contactMessage.focus();
+  } else {
+    contactName.focus();
+  }
 });
 
 closeForm.addEventListener("click", function (evt) {
   evt.preventDefault();
-	contactPopup.classList.remove("form-show");
-	contactPopup.classList.remove("form-error");
+  contactPopup.classList.remove("form-show");
+  contactPopup.classList.remove("form-error");
 });
 
 contactForm.addEventListener("submit", function (evt) {
-	if (!contactName.value || !contactEmail.value || !contactMessage.value) {
-		evt.preventDefault();
-		contactPopup.classList.remove("form-error");
-		contactPopup.offsetWidth = contactPopup.offsetWidth;
-		contactPopup.classList.add("form-error");
-	} else {
-		if (isStorageSupport) {
-			localStorage.setItem("name", contactName.value);
-			localStorage.setItem("email", contactEmail.value);
-		}
-	}
+  if (!contactName.value || !contactEmail.value || !contactMessage.value) {
+    evt.preventDefault();
+    contactPopup.classList.remove("form-error");
+    contactPopup.offsetWidth = contactPopup.offsetWidth;
+    contactPopup.classList.add("form-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("name", contactName.value);
+      localStorage.setItem("email", contactEmail.value);
+    }
+  }
 });
 
 window.addEventListener("keydown", function (evt) {
-	if (evt.keyCode === 27) {
-		if (contactPopup.classList.contains("form-show")) {
-			evt.preventDefault();
-			contactPopup.classList.remove("form-show");
-			contactPopup.classList.remove("form-error");
-		}
-	}
+  if (evt.keyCode === 27) {
+    if (contactPopup.classList.contains("form-show")) {
+      evt.preventDefault();
+      contactPopup.classList.remove("form-show");
+      contactPopup.classList.remove("form-error");
+    }
+  }
 });
 

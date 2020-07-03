@@ -604,6 +604,7 @@ img {
   position: absolute;
   top: 0;
   padding: 0;
+  width: 100%;
   margin: 0;
   border: none;
 }
@@ -869,7 +870,8 @@ input[type=number] {
   opacity: 0.1;
 }
 
-.filter-input-radio:disabled + label {
+.filter-input-radio:disabled + label,
+.filter-input-radio:checked:disabled + label {
   color: var(--opacity-black);
 }
 
@@ -931,7 +933,8 @@ input[type=number] {
   opacity: 0.1;
 }
 
-.filter-input-checkbox:disabled + label {
+.filter-input-checkbox:disabled + label,
+.filter-input-checkbox:checked:disabled + label {
   color: var(--opacity-black);
 }
 
@@ -941,6 +944,11 @@ input[type=number] {
 .filter-input-checkbox:disabled:hover + label::after {
   opacity: 0.1;
 }
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
+  cursor: default
+};
 
 .show-results {
   display: block;
